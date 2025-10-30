@@ -5,7 +5,7 @@ function Tasks() {
   const [tasks, setTasks] = useState([]);
 
   useEffect(() => {
-    api.get('/tasks')
+    api.get('http://localhost:5215/tasks')
       .then(res => setTasks(res.data))
       .catch(err => console.error(err));
   }, []);
